@@ -23,9 +23,9 @@ public class Car implements Comparable { //<Car>{
         if (temp == 0) {
             temp = this.price - ((Car)o).price;
             if (temp == 0){
-                temp = this.model.length() - ((Car) o).model.length();
+                temp = this.model.compareToIgnoreCase(((Car) o).model);
                 if (temp == 0){
-                    temp = this.color.length() - ((Car) o).color.length();
+                    temp = this.color.compareToIgnoreCase(((Car) o).color);
                 }
             }
         }
